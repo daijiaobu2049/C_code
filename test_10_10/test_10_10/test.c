@@ -32,8 +32,25 @@
 // }
 
 
+//int main()
+//{
+//	printf("%15d\n", 123);
+//	return 0;
+//}
+
+
 int main()
 {
-	printf("%15d\n", 123);
+	/*printf("%f\n", 123.45);
+	printf("%+d\n", 12);
+	printf("%+d\n", -12);
+	printf("Number is %.2f\n", 0.566);
+	printf("%5.1f\n", 0.5);*/
+
+
+	//printf("%*.*f\n", 15, 3, 123.45);
+
+
+	printf("%.5s\n", "hello world");
 	return 0;
 }

@@ -35,7 +35,6 @@
 //	z = x + y;
 //	return z;
 //}
-
 int add(int x, int y)
 {
 	return x + y;

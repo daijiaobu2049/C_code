@@ -23,13 +23,37 @@ void DisplayBoard(char board[ROWS][COLS], int row, int col)
 		printf("%d ", i);
 	}
 	printf("\n");
+	//打印纵坐标
 	for (int i = 1; i <= row; i++)
 	{
 		printf("%d ", i);
+		//打印棋盘
 		for (int j = 1; j <= col; j++)
 		{
 			printf("%c ", board[i][j]);
 		}
 		printf("\n");
 	}
+}
+
+void SetMine(char mine[ROWS][COLS], int row, int col)
+{
+	//布置十个雷
+	//生成随机坐标，布置雷
+	int count = EASY_COUNT;
+	while (count)
+	{
+		int x = rand() % row + 1;//随机生成1~row
+		int y = rand() % col + 1;//随机生成1~col
+		if (mine[x][y] != '1')//如果生成的随机数已经有了雷，那么就不在该坐标生成
+		{
+			mine[x][y] = '1';
+			count--;
+		}
+	}
+}
+
+void FindMine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col)
+{
+
 }
